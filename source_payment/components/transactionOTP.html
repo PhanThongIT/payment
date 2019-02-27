@@ -1,0 +1,71 @@
+<div
+        class="card card-dark bg-gray-light p-3"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1300"
+>
+    <div class="card-header m-auto" style="background-color: #ffffff">
+        <h5 class="text-center text-primary"><strong>CONFIRM OTP CODE</strong></h5>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="style_image mw-100" src="./image/scb.jpeg" alt="">
+            </div>
+            <div class="col-md-8 align-middle text-center">
+                <div class="md-form">
+                    <input type="text" class="form-control otp_code" id="otp_code">
+                    <label for="otp_code" class=""><i class="fa fa-code">&nbsp;</i>OTP CODE</label>
+                    <small id="validation_otp" class="text-danger"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card-body">
+        <h5 class="text-center text-primary"><strong>SUMMARY INFORMATION</strong></h5>
+        <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text mw-25 col-md-4"><i
+                        class="fa fa-address-card">&nbsp;</i>TRANSACTION ID</span>
+                <span type="text" class="form-control transaction_id d-inline" id="transaction_id">1</span>
+            </div>
+        </div>
+        <div class="form-group mb-3 ">
+            <div class="input-group-prepend">
+                <span class="input-group-text mw-25 col-md-4"><i class="fa fa-user">&nbsp;</i>FROM ACCOUNT</span>
+                <span type="text" class="form-control from_account d-inline" id="from_account">PRIVATE_ACCOUNT</span>
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text mw-25 col-md-4"><i class="fa fa-dollar-sign">&nbsp;</i>AMOUNT</span>
+                <span type="text" class="form-control transaction_amount d-inline"
+                      id="transaction_amount">300.00 THB</span>
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text mw-25 col-md-4"><i class="fa fa-clock">&nbsp;</i>DATE TIME</span>
+                <span type="text" class="form-control date_time d-inline" id="date_time">20-08-2019 10:20:20</span>
+            </div>
+        </div>
+        <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text mw-25 col-md-4"><i class="fa fa-barcode">&nbsp;</i>REFERENCE CODE</span>
+                <span type="text" class="form-control reference_code d-inline" id="reference_code">W2WE</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="col-md-12">
+            <button
+                    type="button"
+                    class="btn btn-primary btn-rounded waves-effect waves-light btn_submit_otp"
+                    onclick="validationOTP();"
+            >
+                <li class="fa fa-check-circle">&nbsp;</li>
+                SUBMIT
+            </button>
+        </div>
+    </div>
+
+</div>
+</div>

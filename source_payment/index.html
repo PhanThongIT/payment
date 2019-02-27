@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/skin.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <link rel="stylesheet" href="./css/mdb.lite.min.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper p-5">
+    <div class="card">
+        <div class="content-wrapper step_form d-none" id="step_form">
+            <div class="slides form_control_slides">
+                <div class="slide text-center step_login" id="step_login"
+                     data-aos-duration="1000">
+
+                    <a class="col-md-12" name="login_button" id="check_login" onclick="confirmPricing()" href="#"><h6><i
+                            class="fa fa-sign-in-alt fa_icon_check_login">&nbsp;</i>Login Account</h6></a>
+                    <div class="content_warning_login"></div>
+                    <div class="content_login"
+                         data-aos-duration="1000">
+                    </div>
+                </div>
+
+                <div class="slide text-center step_input_otp">
+                    <a href="#"><h6><i class="fa fa-code">&nbsp;</i>OTP CODE</h6></a>
+                    <div class="content_warning_input_otp"></div>
+                    <div class="content_input_otp"></div>
+                </div>
+
+                <div class="slide text-center step_result_payment">
+                    <a href="#"><h6><i class="fa fa-check-circle">&nbsp;</i>RESULT PAYMENT</h6></a>
+                    <div class="content_warning_result_payment"></div>
+                    <div class="content_result_payment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body payment_information">
+        <div class="card bg-gray-light">
+            <div class="card-header bg-gray text-center payment_information_header">
+                <h4>BANK INFORMATION</h4>
+            </div>
+            <div class="card-body payment_information_body text-center">
+                <div class="card card-cascade wider mb-4 p-3">
+
+                    <div class="col-md-6 card-img payment_information_body_image text-center align-middle m-auto mt-2">
+                        <img class="card-img mw-100 align-middle" src="./image/scb.jpeg"
+                             alt="Bank of Philippines">
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!-- Title -->
+                        <h4 class="card-title"><strong>SCB Bank name</strong></h4>
+                        <!-- Text -->
+                        <div>
+                            <table class="table table-sm">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Viet Nam</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Phone number</th>
+                                    <th>08-808080</th>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Amount</th>
+                                    <th><strong>300.00 THB</strong></th>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="row p-2">
+                                            <div class="col-md-6">
+                                                <button class="btn btn-primary btn-rounded waves-effect waves-light btn_confirm btn-block"
+                                                        type="submit"
+                                                        onclick="confirmPricing()">CONFIRM
+                                                </button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-default rounded waves-effect waves-light btn_cancel btn-block"
+                                                        type="button">
+                                                    CANCEL
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript" src="./js/payment.js"></script>
+<!--<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>-->
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/skin.js"></script>
+<script type="text/javascript" src="./js/mdb.min.js"></script>
+<script type="text/javascript" src="./js/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
