@@ -44,8 +44,12 @@ function validationLogin() {
             $('.content_input_otp').load('./components/common/loading.html');
             setTimeout(function () {
                 $('.content_input_otp').removeClass('show_loading');
-                // $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
-                // $('#step_login').css({backgroundColor: '#28a745', border: '#28a745'});
+
+                // remove icon and background login/ choose account
+                $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
+                $('.fa_icon_check_choose_account').removeClass('fa-user').addClass('fa-check-circle');
+                $('.step_login, .step_choose_account').css({background: '#28a745', border: '#28a745'});
+
                 $('.content_warning_input_otp').load('./components/warning/OtpWarning.html');
                 $('.content_input_otp').load('./components/transactionOTP.html');
                 countDownTime('#timer', true);
@@ -81,7 +85,17 @@ function validationOTP() {
             $('.content_result_payment').load('./components/common/loading.html');
             setTimeout(function () {
                 $('.content_warning_result_payment').empty();
+
+                // remove icon choose otp code
+                $('.fa_icon_check_otp_code').removeClass('fa-code').addClass('fa-check-circle');
+                $('.step_input_otp').css({background: '#28a745', border: '#28a745'});
+
+                // remove icon result
+                $('.fa_icon_check_result').removeClass('fa-tasks').addClass('fa-check-circle');
+                $('.step_result_payment').css({background: '#28a745', border: '#28a745'});
+
                 $('.content_result_payment').load('./components/result.html');
+
             }, 8000);
         }
     });

@@ -17,59 +17,70 @@
 
 <body>
 <div class="wrapper p-0">
-    <div class="card">
-        <div class="card card-primary card-body step_form d-none" id="step_form">
-            <section id="tabs">
-                <div class="container">
-                    <h6 class="section-title h1">STEP TRANSACTION</h6>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <nav>
-                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active step_login" id="nav-login-tab step_login" data-toggle="tab"
-                                       href="#nav-login" role="tab" aria-controls="nav-login"
-                                       aria-selected="true">LOGIN</a>
+    <div class="card card-primary card-body step_form d-none" id="step_form">
+        <section id="tabs" class="bg-gray-light">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xs-6 col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill p-1 rounded" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active step_login bg-gray mr-1"
+                                   id="nav-login-tab step_login"
+                                   data-toggle="tab"
+                                   href="#nav-login" role="tab" aria-controls="nav-login"
+                                   aria-selected="true"><i class="fa fa-sign-in-alt fa_icon_check_login"
+                                >&nbsp;</i>LOGIN</a>
 
-                                    <a class="nav-item nav-link" id="nav-choose-account-tab" data-toggle="tab"
-                                       href="#nav-choose-account" role="tab" aria-controls="nav-choose-account"
-                                       aria-selected="false">CHOOSE ACCOUNT</a>
+                                <a class="nav-item nav-link step_choose_account bg-gray mr-1 rounded"
+                                   id="nav-choose-account-tab step_choose_account" data-toggle="tab"
+                                   href="#nav-choose-account" role="tab" aria-controls="nav-choose-account"
+                                   aria-selected="false">
+                                    <i class="fa fa-user fa_icon_check_choose_account">&nbsp;</i>
+                                    CHOOSE ACCOUNT</a>
 
-                                    <a class="nav-item nav-link step_input_otp" id="nav-otp-code-tab" data-toggle="tab"
-                                       href="#nav-otp-code" role="tab" aria-controls="nav-otp-code"
-                                       aria-selected="false">OTP CODE</a>
+                                <a class="nav-item nav-link step_input_otp bg-gray mr-1 rounded" id="nav-otp-code-tab"
+                                   data-toggle="tab"
+                                   href="#nav-otp-code" role="tab" aria-controls="nav-otp-code"
+                                   aria-selected="false"><i class="fa fa-code fa_icon_check_otp_code">&nbsp;</i>
+                                    OTP CODE</a>
 
-                                    <a class="nav-item nav-link step_result_payment" id="nav-result-tab" data-toggle="tab"
-                                       href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="false">RESULT</a>
-                                </div>
-                            </nav>
-                            <div class="tab-content w-100 bg-gray-light py-3 px-3 px-sm-0" id="nav-tabContent">
-                                <div class="tab-pane content_tab_login fade show active" id="nav-login" role="tabpanel"
-                                     aria-labelledby="nav-login-tab">
-                                    <div class="content_login"></div>
-                                </div>
-                                <div class="tab-pane content_tab_choose_account fade" id="nav-choose-account" role="tabpanel"
-                                     aria-labelledby="nav-choose-account-tab">
-                                    <div class="col-md-12">
-                                        CHOOSE ACCOUNT
-                                    </div>
-                                </div>
-                                <div class="tab-pane content_tab_otp_code fade" id="nav-otp-code" role="tabpanel"
-                                     aria-labelledby="nav-otp-code-tab">
-                                    <div class="content_warning_input_otp"></div>
-                                    <div class="content_input_otp"></div>
-                                </div>
-                                <div class="tab-pane content_tab_result fade" id="nav-result" role="tabpanel"
-                                     aria-labelledby="nav-result-tab">
-                                    <div class="content_warning_result_payment"></div>
-                                    <div class="content_result_payment"></div>
+                                <a class="nav-item nav-link step_result_payment bg-gray mr-1 rounded"
+                                   id="nav-result-tab"
+                                   data-toggle="tab"
+                                   href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="false"><i
+                                        class="fa fa-tasks fa_icon_check_result">&nbsp;</i>
+                                    RESULT</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content w-100 bg-gray-light border rounded py-3 px-3 px-sm-0"
+                             id="nav-tabContent">
+                            <div class="tab-pane content_tab_login fade show active" id="nav-login" role="tabpanel"
+                                 aria-labelledby="nav-login-tab">
+                                <div class="content_login p-2"></div>
+                            </div>
+                            <div class="tab-pane content_tab_choose_account fade" id="nav-choose-account"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-choose-account-tab">
+                                <div class="col-md-12">
+                                    CHOOSE ACCOUNT
                                 </div>
                             </div>
-
+                            <div class="tab-pane content_tab_otp_code fade" id="nav-otp-code" role="tabpanel"
+                                 aria-labelledby="nav-otp-code-tab">
+                                <div class="content_warning_input_otp"></div>
+                                <div class="content_input_otp p-2"></div>
+                            </div>
+                            <div class="tab-pane content_tab_result fade" id="nav-result" role="tabpanel"
+                                 aria-labelledby="nav-result-tab">
+                                <div class="content_warning_result_payment"></div>
+                                <div class="content_result_payment p-2"></div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
 
     <div class="card-body payment_information">

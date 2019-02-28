@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300|Oswald);
 section {
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
 section .section-title {
   text-align: center;
   color: #000000;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 #tabs{
@@ -21,16 +21,24 @@ section .section-title {
   color: #000000;
   background-color: transparent;
   border-color: transparent transparent #000000;
-  border-bottom: 4px solid !important;
-  font-size: 20px;
-  font-weight: bold;
+  border-left: 4px solid #00c853!important;
+  font-size: 18px;
 }
+
+#tabs .nav-tabs .nav-link.active {
+  background-color: #4285f4;
+}
+
 #tabs .nav-tabs .nav-link {
-  border: 1px solid transparent;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
-  color: #000000;
+  color: #343434;
   font-size: 20px;
+}
+
+#tabs .nav-tabs .nav-link:hover {
+  background: #4285f4;
+  font-size: 21px;
 }
 
 /*Loading Animation*/
