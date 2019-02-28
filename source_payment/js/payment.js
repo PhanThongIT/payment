@@ -1,5 +1,5 @@
 function confirmPricing() {
-    $('.btn_confirm').click(function () {
+    $(document).on('click','.btn_confirm', function () {
         $('.payment_information').addClass('d-none');
         $('.step_form').removeClass('d-none');
         $('.step_login').addClass('active');
@@ -13,7 +13,7 @@ function confirmPricing() {
 
 // Check Validation in Login Form
 function validationLogin() {
-    $('.btn_submit_login').click(function () {
+    $(document).on('click','.btn_submit_login', function () {
         let userName = $('#user_name').val();
         let password = $('#password').val();
         if (!userName) {
@@ -57,7 +57,7 @@ function validationLogin() {
 
 // Check validation OTP code
 function validationOTP() {
-    $('.btn_submit_otp').click(function () {
+    $(document).on('click','.btn_submit_otp', function () {
         let otpCode = $(".otp_code").val();
         if (!otpCode) {
             $('#validation_otp').text('(*) OTP code is not null');
@@ -103,5 +103,3 @@ function countDownTime(nameAttribute) {
         }
     }, 1000);
 }
-
-
