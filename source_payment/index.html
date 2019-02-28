@@ -16,33 +16,59 @@
 </head>
 
 <body>
-<div class="wrapper p-5">
+<div class="wrapper p-0">
     <div class="card">
-        <div class="content-wrapper step_form d-none" id="step_form">
-            <div class="slides form_control_slides">
-                <div class="slide text-center step_login" id="step_login"
-                     data-aos-duration="1000">
+        <div class="card card-primary card-body step_form d-none" id="step_form">
+            <section id="tabs">
+                <div class="container">
+                    <h6 class="section-title h1">STEP TRANSACTION</h6>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active step_login" id="nav-login-tab step_login" data-toggle="tab"
+                                       href="#nav-login" role="tab" aria-controls="nav-login"
+                                       aria-selected="true">LOGIN</a>
 
-                    <a class="col-md-12" name="login_button" id="check_login" onclick="confirmPricing()" href="#"><h6><i
-                            class="fa fa-sign-in-alt fa_icon_check_login">&nbsp;</i>Login Account</h6></a>
-                    <div class="content_warning_login"></div>
-                    <div class="content_login"
-                         data-aos-duration="1000">
+                                    <a class="nav-item nav-link" id="nav-choose-account-tab" data-toggle="tab"
+                                       href="#nav-choose-account" role="tab" aria-controls="nav-choose-account"
+                                       aria-selected="false">CHOOSE ACCOUNT</a>
+
+                                    <a class="nav-item nav-link step_input_otp" id="nav-otp-code-tab" data-toggle="tab"
+                                       href="#nav-otp-code" role="tab" aria-controls="nav-otp-code"
+                                       aria-selected="false">OTP CODE</a>
+
+                                    <a class="nav-item nav-link step_result_payment" id="nav-result-tab" data-toggle="tab"
+                                       href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="false">RESULT</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content w-100 bg-gray-light py-3 px-3 px-sm-0" id="nav-tabContent">
+                                <div class="tab-pane content_tab_login fade show active" id="nav-login" role="tabpanel"
+                                     aria-labelledby="nav-login-tab">
+                                    <div class="content_login"></div>
+                                </div>
+                                <div class="tab-pane content_tab_choose_account fade" id="nav-choose-account" role="tabpanel"
+                                     aria-labelledby="nav-choose-account-tab">
+                                    <div class="col-md-12">
+                                        CHOOSE ACCOUNT
+                                    </div>
+                                </div>
+                                <div class="tab-pane content_tab_otp_code fade" id="nav-otp-code" role="tabpanel"
+                                     aria-labelledby="nav-otp-code-tab">
+                                    <div class="content_warning_input_otp"></div>
+                                    <div class="content_input_otp"></div>
+                                </div>
+                                <div class="tab-pane content_tab_result fade" id="nav-result" role="tabpanel"
+                                     aria-labelledby="nav-result-tab">
+                                    <div class="content_warning_result_payment"></div>
+                                    <div class="content_result_payment"></div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-
-                <div class="slide text-center step_input_otp">
-                    <a href="#"><h6><i class="fa fa-code">&nbsp;</i>OTP CODE</h6></a>
-                    <div class="content_warning_input_otp"></div>
-                    <div class="content_input_otp"></div>
-                </div>
-
-                <div class="slide text-center step_result_payment">
-                    <a href="#"><h6><i class="fa fa-check-circle">&nbsp;</i>RESULT PAYMENT</h6></a>
-                    <div class="content_warning_result_payment"></div>
-                    <div class="content_result_payment"></div>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
 
@@ -52,9 +78,9 @@
                 <h4>BANK INFORMATION</h4>
             </div>
             <div class="card-body payment_information_body text-center">
-                <div class="card card-cascade wider mb-4 p-3">
+                <div class="card card-cascade wider mb-1 p-1">
 
-                    <div class="col-md-6 card-img payment_information_body_image text-center align-middle m-auto mt-2">
+                    <div class="col-md-4 card-img payment_information_body_image text-center align-middle m-auto mt-2">
                         <img class="card-img mw-100 align-middle" src="./image/scb.jpeg"
                              alt="Bank of Philippines">
                     </div>
@@ -91,7 +117,7 @@
                                                 </button>
                                             </div>
                                             <div class="col-md-6">
-                                                <button class="btn btn-default rounded waves-effect waves-light btn_cancel btn-block"
+                                                <button class="btn bg-gray rounded btn_cancel btn-block"
                                                         type="button">
                                                     CANCEL
                                                 </button>

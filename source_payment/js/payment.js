@@ -2,11 +2,9 @@ function confirmPricing() {
     $('.btn_confirm').click(function () {
         $('.payment_information').addClass('d-none');
         $('.step_form').removeClass('d-none');
-        $('.slide.active').removeClass('active');
         $('.step_login').addClass('active');
         $('.content_login').load('./components/common/loading.html');
         setTimeout(function () {
-            $('.content_warning_login').load('./components/warning/loginWarning.html');
             $('.step_login').addClass('active');
             $('.content_login').load('./components/login.html');
         }, 5000);
@@ -35,14 +33,19 @@ function validationLogin() {
             $('#validation_password').empty();
         }
         if (userName === 'phanthong' && password === 'phanthongit112') {
+            $('.content_login').empty();
+            $('.content_tab_login').removeClass('show');
+            $('.content_tab_login').removeClass('active');
             $('.step_login').addClass('disabled');
-            $('.slide.active').removeClass('active');
+            $('.step_login').removeClass('active');
             $('.step_input_otp').addClass('active');
+            $('.content_tab_otp_code').addClass('show');
+            $('.content_tab_otp_code').addClass('active');
             $('.content_input_otp').load('./components/common/loading.html');
             setTimeout(function () {
                 $('.content_input_otp').removeClass('show_loading');
-                $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
-                $('#step_login').css({backgroundColor: '#28a745', border: '#28a745'});
+                // $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
+                // $('#step_login').css({backgroundColor: '#28a745', border: '#28a745'});
                 $('.content_warning_input_otp').load('./components/warning/OtpWarning.html');
                 $('.content_input_otp').load('./components/transactionOTP.html');
                 countDownTime('#timer', true);
@@ -66,7 +69,13 @@ function validationOTP() {
         $('.warning_message').empty();
         if (otpCode === '1234') {
             // Check OK OTP
+            $('.content_tab_otp_code').removeClass('show');
+            $('.content_tab_otp_code').removeClass('active');
             $('.step_input_otp').removeClass('active');
+
+            $('.content_tab_result').addClass('show');
+            $('.content_tab_result').addClass('active');
+
             $('.step_result_payment').addClass('active');
             $('.content_warning_result_payment').load('./components/warning/transactionWarning.html');
             $('.content_result_payment').load('./components/common/loading.html');

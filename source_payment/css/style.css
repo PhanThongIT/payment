@@ -1,101 +1,43 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300|Oswald);
-.slides {
-  position: relative;
+section {
+  padding: 60px 0;
 }
-.slides .slide {
-  position: absolute;
-  top: 0;
-  width: calc(33% - 1em);
-  max-height: 3.5em;
-  margin: 0.5em;
-  padding: 1em;
-  background: #236bca;
-  border: 2px solid #0b51c5;
-  border-radius: 15px;
-  color: white;
-  float: left;
-  overflow: hidden;
-  transition: max-height 0.25s       ease-in-out, width      0.25s 0.25s ease-in-out, left       0.25s 0.5s  ease-in-out, top        0.25s 0.75s ease-in-out;
-}
-.slides .slide:nth-child(1) {
-  left: 0%;
-}
-.slides .slide:nth-child(2) {
-  left: 33.3333%;
-}
-.slides .slide:nth-child(3) {
-  left: 66.6666%;
-}
-.slides .slide > a {
-  display: block;
-  padding-bottom: 1em;
-  font-family: 'Oswald';
+
+section .section-title {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 50px;
   text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  transition: color 2s;
+}
+#tabs{
+  background: #d7d9dd;
+  color: #000000;
+}
+#tabs h6.section-title{
+  color: #000000;
 }
 
-.slides .slide:hover {
-  background-color: #0b51c5;
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #000000;
+  background-color: transparent;
+  border-color: transparent transparent #000000;
+  border-bottom: 4px solid !important;
+  font-size: 20px;
+  font-weight: bold;
 }
-
-.slides .slide.active {
-  position: absolute;
-  top: 4.5em;
-  left: 0;
-  width: 99%;
-  max-height: 1000px;
-  float: none;
-  transition: top        0.25s 1s    ease-in-out, left       0.25s 1.25s ease-in-out, width      0.25s 1.5s  ease-in-out, max-height 0.25s 1.75s ease-in-out;
+#tabs .nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: #000000;
+  font-size: 20px;
 }
-.slides .slide.active a {
-  color: white;
-}
-
-/** PAGE STYLES **/
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before, .slides:before,
-.cf:after,
-.slides:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after, .slides:after {
-  clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf, .slides {
-  *zoom: 1;
-}
-
 
 /*Loading Animation*/
 .sk-folding-cube {
   margin: 20px auto;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);
@@ -117,7 +59,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #000000;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;

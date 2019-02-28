@@ -1,7 +1,25 @@
-<div class="alert alert-warning alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-    <h5><i class="fas fa-exclamation-triangle"></i>&nbsp;<strong>Warning!</strong></h5>
-    <div class="notification_message">
-        <h6>LOGIN ACCOUNT</h6>
+<div class="content-wrapper step_form d-none" id="step_form">
+    <div class="slides form_control_slides">
+        <div class="slide text-center step_login" id="step_login"
+             data-aos-duration="1000">
+
+            <a class="col-md-12" name="login_button" id="check_login" onclick="confirmPricing()" href="#"><h6><i
+                    class="fa fa-sign-in-alt fa_icon_check_login">&nbsp;</i>Login Account</h6></a>
+            <div class="content_login"
+                 data-aos-duration="1000">
+            </div>
+        </div>
+
+        <div class="slide text-center step_input_otp">
+            <a href="#"><h6><i class="fa fa-code">&nbsp;</i>OTP CODE</h6></a>
+            <div class="content_warning_input_otp"></div>
+            <div class="content_input_otp"></div>
+        </div>
+
+        <div class="slide text-center step_result_payment">
+            <a href="#"><h6><i class="fa fa-check-circle">&nbsp;</i>RESULT PAYMENT</h6></a>
+            <div class="content_warning_result_payment"></div>
+            <div class="content_result_payment"></div>
+        </div>
     </div>
 </div>
