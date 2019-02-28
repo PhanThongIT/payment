@@ -44,7 +44,6 @@ function validationLogin() {
             $('.content_input_otp').load('./components/common/loading.html');
             setTimeout(function () {
                 $('.content_input_otp').removeClass('show_loading');
-
                 // remove icon and background login/ choose account
                 $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
                 $('.fa_icon_check_choose_account').removeClass('fa-user').addClass('fa-check-circle');
@@ -88,30 +87,14 @@ function validationOTP() {
 
                 // remove icon choose otp code
                 $('.fa_icon_check_otp_code').removeClass('fa-code').addClass('fa-check-circle');
-                $('.step_input_otp').css({background: '#28a745', border: '#28a745'});
-
-                // remove icon result
                 $('.fa_icon_check_result').removeClass('fa-tasks').addClass('fa-check-circle');
-                $('.step_result_payment').css({background: '#28a745', border: '#28a745'});
+                $('.step_input_otp, .step_result_payment').css({background: '#28a745', border: '#28a745'});
 
                 $('.content_result_payment').load('./components/result.html');
-
             }, 8000);
         }
     });
 }
-
-$('.slide a[name="login_button"]').click(function () {
-    $('.slide.active').removeClass('active');
-    $(this).closest('.slide').addClass('active');
-    $('.content_login').load('./components/common/loading.html');
-    setTimeout(function () {
-        $('.content_login').removeClass('show_loading');
-        $('.content_login').load('./components/login.html');
-        $('.content_warning').load('./components/warning/loginWarning.html');
-    }, 5000);
-});
-
 
 // Count down timmer
 function countDownTime(nameAttribute) {
@@ -124,11 +107,5 @@ function countDownTime(nameAttribute) {
         }
     }, 1000);
 }
-
-$('.slide a').click(function () {
-    $('.slide.active').removeClass('active');
-    $(this).closest('.slide').addClass('active');
-    return false;
-});
 
 

@@ -21,7 +21,6 @@ section .section-title {
   color: #000000;
   background-color: transparent;
   border-color: transparent transparent #000000;
-  border-left: 4px solid #00c853!important;
   font-size: 18px;
 }
 
@@ -32,13 +31,18 @@ section .section-title {
 #tabs .nav-tabs .nav-link {
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
-  color: #343434;
+  color: #ffffff;
   font-size: 20px;
 }
 
 #tabs .nav-tabs .nav-link:hover {
   background: #4285f4;
   font-size: 21px;
+  box-shadow: 1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }
 
 /*Loading Animation*/
