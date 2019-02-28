@@ -32,30 +32,26 @@ function validationLogin() {
         } else {
             $('#validation_password').empty();
         }
-        if (userName === 'phanthong' && password === 'phanthongit112') {
-            $('.content_login').empty();
-            $('.content_tab_login').removeClass('show');
-            $('.content_tab_login').removeClass('active');
-            $('.step_login').addClass('disabled');
-            $('.step_login').removeClass('active');
-            $('.step_input_otp').addClass('active');
-            $('.content_tab_otp_code').addClass('show');
-            $('.content_tab_otp_code').addClass('active');
-            $('.content_input_otp').load('./components/common/loading.html');
-            setTimeout(function () {
-                $('.content_input_otp').removeClass('show_loading');
-                // remove icon and background login/ choose account
-                $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
-                $('.fa_icon_check_choose_account').removeClass('fa-user').addClass('fa-check-circle');
-                $('.step_login, .step_choose_account').css({background: '#28a745', border: '#28a745'});
+        $('.content_login').empty();
+        $('.content_tab_login').removeClass('show');
+        $('.content_tab_login').removeClass('active');
+        $('.step_login').addClass('disabled');
+        $('.step_login').removeClass('active');
+        $('.step_input_otp').addClass('active');
+        $('.content_tab_otp_code').addClass('show');
+        $('.content_tab_otp_code').addClass('active');
+        $('.content_input_otp').load('./components/common/loading.html');
+        setTimeout(function () {
+            $('.content_input_otp').removeClass('show_loading');
+            // remove icon and background login/ choose account
+            $('.fa_icon_check_login').removeClass('fa-sign-in-alt').addClass('fa-check-circle');
+            $('.fa_icon_check_choose_account').removeClass('fa-user').addClass('fa-check-circle');
+            $('.step_login, .step_choose_account').css({background: '#28a745', border: '#28a745'});
 
-                $('.content_warning_input_otp').load('./components/warning/OtpWarning.html');
-                $('.content_input_otp').load('./components/transactionOTP.html');
-                countDownTime('#timer', true);
-            }, 5000);
-        } else {
-            $('#login_fail').text("Login fail!");
-        }
+            $('.content_warning_input_otp').load('./components/warning/OtpWarning.html');
+            $('.content_input_otp').load('./components/transactionOTP.html');
+            countDownTime('#timer', true);
+        }, 5000);
     });
 }
 
